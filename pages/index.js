@@ -14,10 +14,10 @@ import {useState, useEffect} from 'react'
 
 export default function Home() {
   const [currentReply, setCurrentReply] = useState()
-  const [currentQues, setCurrentQues] = useState()
+  const [currentQues, setCurrentQues] = useState(undefined)
   const [chats, setChat] = useState()
   const updateChat = () => {
-    axios.get("http://192.168.1.228:8800/getChat").then((data) => {
+    axios.get("http://3.108.184.78:8800/getChat").then((data) => {
          
           data.data.length != 0 ? 
           setChat(data && JSON.parse(data.data))
@@ -27,7 +27,7 @@ export default function Home() {
     
   }
   const getChatBotReply = () => {
-    axios.post("http://192.168.1.228:8800/", {
+    axios.post("http://3.108.184.78:8800/", {
       msg : currentQues,
     }).then((data) => {
           setCurrentReply(data.data)
@@ -36,7 +36,9 @@ export default function Home() {
   }
 
   const sendChatUser = () => {
-    axios.post("http://192.168.1.228:8800/chat", {
+    console.log("Hello");
+    if(currentQues != ''){
+    axios.post("http://3.108.184.78:8800//chat", {
       msg : currentQues,
       byBot: false
     }).then((data) => {
@@ -47,9 +49,10 @@ export default function Home() {
 
     })
   }
+  }
 
   const sendChatBot = (data) => {
-    axios.post("http://192.168.1.228:8800/chat", {
+    axios.post("http://3.108.184.78:8800//chat", {
       msg : data && data,
       byBot: true
     }).then((data1) => {
@@ -107,14 +110,14 @@ export default function Home() {
       <div className={styles.inputField}>
         <input className={styles.typeText} type="text" placeholder="Type a Message" onChange={(e) => e.target.value != null ? setCurrentQues(e.target.value): null}/>
         
-        <div className={styles.sendIcon} onClick={sendChatUser}>
+        <div className={styles.sendIcon} >
           <Image
             src={attachment}
             alt="attachmentIcon"
           />
         </div>
 
-        <div className={styles.sendIcon}>
+        <div className={styles.sendIcon} onClick={sendChatUser}>
           <Image
             src={send}
             alt="sendIcon"

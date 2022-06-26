@@ -18,11 +18,11 @@ function doubts_dashboard() {
           alt="logo"
         /></div>
 
-        <div className={styles.icon2}><a href="/">
+        <div className={styles.icon2}><Link href="/">
           <Image
             src={home}
             alt="home"
-          /></a>
+          /></Link>
         </div>
 
         <div className={styles.icon2}><a href="doubts_dashboard"><Image

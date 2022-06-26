@@ -4,7 +4,7 @@ import home from '../public/home.png'
 import dashboard from '../public/dashboard.png'
 import styles from '../styles/doubt_clearing.module.css'
 import Doubts_Card from '../Components/Doubts_Card/doubt_card'
-
+import Link from 'next/link'
 function doubt_clearing() {
   return (
     <div>
@@ -16,17 +16,17 @@ function doubt_clearing() {
           alt="logo"
         /></div>
 
-        <div className={styles.icon2}><a href="/">
+        <div className={styles.icon2}><Link href="/">
           <Image
             src={home}
             alt="home"
-          /></a>
+          /></Link>
         </div>
 
-        <div className={styles.icon2}><a href="doubts_dashboard"><Image
+        <div className={styles.icon2}><Link href="doubts_dashboard"><Image
           src={dashboard}
           alt="dashboard"
-        /></a></div>
+        /></Link></div>
         
       </nav>
 

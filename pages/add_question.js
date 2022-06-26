@@ -5,8 +5,20 @@ import logo from '../public/logo.png'
 import home from '../public/home.png'
 import dashboard from '../public/dashboard.png'
 import styles from '../styles/add_question.module.css'
+import {useState} from 'react'
+import axios from 'axios'
+function Add_question() {
+  const [ques, setQues] = useState()
+  const [ans, setAns] = useState()
 
-function add_question() {
+  const upload = () => {
+    axios.post("http://3.108.184.78:8800/learn", {
+      ques,
+      ans
+    }).then((data) => {
+      console.log(data);
+    })
+  }
   return (
     <div>
 
@@ -17,17 +29,17 @@ function add_question() {
           alt="logo"
         /></div>
 
-        <div className={styles.icon2}><a href="/">
+        <div className={styles.icon2}><Link href="/">
           <Image
             src={home}
             alt="home"
-          /></a>
+          /></Link>
         </div>
 
-        <div className={styles.icon2}><a href="doubts_dashboard"><Image
+        <div className={styles.icon2}><Link href="doubts_dashboard"><Image
           src={dashboard}
           alt="dashboard"
-        /></a></div>
+        /></Link></div>
         
       </nav>
 
@@ -38,16 +50,20 @@ function add_question() {
 
       <div className={styles.inputField}>
         <label className={styles.inputName} htmlFor="">Question</label>
-        <textarea className={styles.typeText} rows="6" cols="45" type="text" placeholder="Type the question here"/>
+        <textarea className={styles.typeText} rows="6" cols="45" type="text" placeholder="Type the question here" onChange={(e) => setQues(e.target.value)}/>
         
         <label className={styles.inputName} htmlFor="">Answer</label>
-        <textarea className={styles.typeText} rows="6" cols="45"  type="text" placeholder="Type the answer here"/>
+        <textarea className={styles.typeText} rows="6" cols="45"  type="text" placeholder="Type the answer here"  onChange={(e) => setAns(e.target.value)}/>
 
-        <div className={styles.button}>Submit</div>
+        <Link href="/">
+
+        <div className={styles.button} onClick={upload}>Submit</div>
+        </Link>
+
     </div>
 
     </div>
   )
 }
 
-export default add_question
+export default Add_question
