@@ -1,0 +1,9 @@
+.chat {
+  width: 80%;
+  padding: 15px;
+  background-color: #5e40a3;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
+  border-radius: 20px 20px 20px 0px;
+  margin-left: 10px;
+}
