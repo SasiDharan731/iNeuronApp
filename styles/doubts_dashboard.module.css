@@ -1,0 +1,24 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.icon1 {
+  width: 55px;
+  margin-right: 50%;
+}
+
+.icon2 {
+  width: 35px;
+  margin-left: 20px;
+}
+
+.card_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}

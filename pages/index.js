@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import logo from '../public/logo.png'
 import add from '../public/add.png'
+import dashboard from '../public/dashboard.png'
 import Incoming_Msg from '../Components/Incoming_Msg/incoming_msg'
 import Outgoing_Msg from '../Components/Outgoing_Msg/outgoing_msg'
 import send from '../public/send.png'
@@ -25,6 +26,11 @@ export default function Home() {
             alt="add"
           /></a>
         </div>
+
+        <div className={styles.icon2}><a href="doubts_dashboard"><Image
+          src={dashboard}
+          alt="dashboard"
+        /></a></div>
         
       </nav>
 

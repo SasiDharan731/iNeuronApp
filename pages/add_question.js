@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../public/logo.png'
 import home from '../public/home.png'
+import dashboard from '../public/dashboard.png'
 import styles from '../styles/add_question.module.css'
 
 function add_question() {
@@ -22,6 +23,11 @@ function add_question() {
             alt="home"
           /></a>
         </div>
+
+        <div className={styles.icon2}><a href="doubts_dashboard"><Image
+          src={dashboard}
+          alt="dashboard"
+        /></a></div>
         
       </nav>
 

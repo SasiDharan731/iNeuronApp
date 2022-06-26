@@ -1,0 +1,24 @@
+.card {
+  width: 90vw;
+  padding: 15px;
+  background: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #281c43;
+  font-size: 18px;
+  box-shadow: 4px 4px 33px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.violet {
+  color: #5e40a3;
+}
+
+.member_det {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(94, 64, 163, 0.2);
+  width: 80vw;
+  height: 12vw;
+  border-radius: 5px;
+}
