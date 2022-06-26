@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import logo from '../public/logo.png'
 import add from '../public/add.png'
+import attachment from '../public/attachment.png'
 import dashboard from '../public/dashboard.png'
 import Incoming_Msg from '../Components/Incoming_Msg/incoming_msg'
 import Outgoing_Msg from '../Components/Outgoing_Msg/outgoing_msg'
@@ -58,6 +59,13 @@ export default function Home() {
       <div className={styles.inputField}>
         <input className={styles.typeText} type="text" placeholder="Type a Message"/>
         
+        <div className={styles.sendIcon}>
+          <Image
+            src={attachment}
+            alt="attachmentIcon"
+          />
+        </div>
+
         <div className={styles.sendIcon}>
           <Image
             src={send}
