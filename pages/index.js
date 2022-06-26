@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import logo from '../public/logo.png'
 import add from '../public/add.png'
@@ -18,10 +19,12 @@ export default function Home() {
           alt="logo"
         /></div>
 
-        <div className={styles.icon2}><Image
-          src={add}
-          alt="add"
-        /></div>
+        <div className={styles.icon2}><a href="add_question">
+          <Image
+            src={add}
+            alt="add"
+          /></a>
+        </div>
         
       </nav>
 
