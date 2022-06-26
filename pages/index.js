@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import logo from '../public/logo.png'
 import add from '../public/add.png'
+import attachment from '../public/attachment.png'
+import dashboard from '../public/dashboard.png'
 import Incoming_Msg from '../Components/Incoming_Msg/incoming_msg'
 import Outgoing_Msg from '../Components/Outgoing_Msg/outgoing_msg'
 import send from '../public/send.png'
@@ -69,10 +72,17 @@ export default function Home() {
           alt="logo"
         /></div>
 
-        <div className={styles.icon2}><Image
-          src={add}
-          alt="add"
-        /></div>
+        <div className={styles.icon2}><a href="add_question">
+          <Image
+            src={add}
+            alt="add"
+          /></a>
+        </div>
+
+        <div className={styles.icon2}><a href="doubts_dashboard"><Image
+          src={dashboard}
+          alt="dashboard"
+        /></a></div>
         
       </nav>
 
@@ -98,6 +108,13 @@ export default function Home() {
         <input className={styles.typeText} type="text" placeholder="Type a Message" onChange={(e) => e.target.value != null ? setCurrentQues(e.target.value): null}/>
         
         <div className={styles.sendIcon} onClick={sendChatUser}>
+          <Image
+            src={attachment}
+            alt="attachmentIcon"
+          />
+        </div>
+
+        <div className={styles.sendIcon}>
           <Image
             src={send}
             alt="sendIcon"

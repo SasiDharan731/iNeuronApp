@@ -44,27 +44,42 @@
 }
 
 .inputField {
-  position: fixed;
-  margin-left: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-top: 15px;
+}
+
+.inputName {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0 15px 0;
 }
 
 .typeText {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   color: #3e3e3e;
-  width: 75vw;
-  height: 13vw;
+  /* width: 80vw;
+  height: 13vw; */
   border: 0;
   border-radius: 10px;
   padding: 10px;
 }
 
-.sendIcon {
-  width: 25px;
-  margin-left: 10px;
-  cursor: pointer;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #281c43;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  color: #ffffff;
+  margin-top: 50px;
 }
